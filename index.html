@@ -16,6 +16,12 @@
         img {
             width: 300px;
         }
+
+        @media only screen and (min-width: 640px) {
+            .share {
+                padding-top: 10px;
+            }
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112051484-1"></script>
@@ -33,7 +39,15 @@
 
 <body>
     <div class="grid-container">
-        <h1>斗鱼赔率计算器</h1>
+        <div class="grid-x">
+            <div class="cell medium-6">
+                <h1>斗鱼赔率计算器</h1>
+            </div>
+            <div class="cell medium-6 share">
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
+        </div>
+
         <div class="grid-x grid-padding-x">
             <div class="cell small-6">
                 <label>赔率</label>
