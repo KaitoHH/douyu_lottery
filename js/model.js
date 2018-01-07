@@ -30,7 +30,7 @@ function AppViewModel() {
         return this.rev_odds_1() * this.rev_odds_2()
     }, this)
     this.yield = ko.pureComputed(function() {
-        return (this.rev_exp() - 1) / (this.rev_odds_1() + this.rev_odds_2()) * 100
+        return (this.rev_exp() - 1) / (this.rev_odds_1() + this.rev_odds_2() + 2) * 100
     }, this)
     this.rev_rate_1 = ko.pureComputed(function() {
         return this.rev_odds_2() + 1
