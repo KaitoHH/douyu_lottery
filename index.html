@@ -22,6 +22,10 @@
                 padding-top: 10px;
             }
         }
+
+        body {
+            overflow-y: scroll;
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112051484-1"></script>
@@ -51,11 +55,24 @@
         <div class="grid-x grid-padding-x">
             <div class="cell small-6">
                 <label>赔率</label>
-                <input type="text" data-bind="textInput:odds1">
+                <div class="input-group">
+                    <input type="number" min="0.1" step="0.1" data-bind="textInput:odds1">
+                    <div class="button-group">
+                        <a class="button" data-bind="click:increaseOdds.bind($data,odds1)"><i class="fi-plus size-14"></i></a>
+                        <a class="button" data-bind="click:decreaseOdds.bind($data,odds1)"><i class="fi-minus size-14"></i></a>
+                    </div>
+                </div>
+
             </div>
             <div class="cell small-6">
                 <label>赔率</label>
-                <input type="text" data-bind="textInput:odds2">
+                <div class="input-group">
+                    <input type="number" min="0.1" step="0.1" data-bind="textInput:odds2">
+                    <div class="button-group">
+                        <a class="button" data-bind="click:increaseOdds.bind($data,odds2)"><i class="fi-plus size-14"></i></a>
+                        <a class="button" data-bind="click:decreaseOdds.bind($data,odds2)"><i class="fi-minus size-14"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="grid-x grid-padding-x">

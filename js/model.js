@@ -119,6 +119,16 @@ function AppViewModel() {
     }, this).extend({
         fixed: 0
     })
+
+    this.increaseOdds = function(odds) {
+        var next = (odds() * 10 + 1) / 10.0
+        odds(next)
+    }
+
+    this.decreaseOdds = function(odds) {
+        var next = (odds() * 10 - 1) / 10.0
+        odds(next)
+    }
 }
 
 ko.applyBindings(new AppViewModel())
