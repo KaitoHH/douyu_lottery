@@ -102,8 +102,8 @@
                         <span data-bind="text:yield_f"></span><span>%</span>
                     </td>
                     <td>
-                        <span class="label success" data-bind="visible: rev_exp() > 1"><i class="fi-check size-14"></i> 盈利</span>
-                        <span class="label alert" data-bind="visible: rev_exp() < 1"><i class="fi-x size-14"></i> 亏损</span>
+                        <span style="display:none;" class="label success" data-bind="visible: rev_exp() > 1"><i class="fi-check size-14"></i> 盈利</span>
+                        <span style="display:none;" class="label alert" data-bind="visible: rev_exp() < 1"><i class="fi-x size-14"></i> 亏损</span>
                     </td>
                 </tr>
                 <tr>
@@ -170,12 +170,11 @@
         </div>
     </div>
 
-
+    <script src="https://cdn.bootcss.com/knockout/3.4.2/knockout-min.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>
     <script src="https://cdn.bootcss.com/foundation/6.4.4-rc1/js/foundation.min.js"></script>
     <script src="https://cdn.bootcss.com/foundation/6.0.5/js/app.js"></script>
-    <script src="https://cdn.bootcss.com/knockout/3.4.2/knockout-min.js"></script>
-    <script type="text/javascript" src="js/model.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a50d88f34f69114"></script>
 </body>
