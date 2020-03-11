@@ -7,7 +7,7 @@
     <title>斗鱼赔率计算器</title>
     <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.1/dist/css/foundation.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/foundation-icons.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/imsun/gitment/style/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     <style>
         td:nth-child(1) {
             width: 40%;
@@ -168,7 +168,7 @@
                 </div>
             </div>
             <div class="tabs-panel" id="panel3c">
-                <div class="comments"></div>
+                <div id="comments"></div>
             </div>
         </div>
     </div>
@@ -182,16 +182,17 @@
     <script>
         $(document).foundation();
     </script>
-    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script>
-        const gitment = new Gitment({
-            owner: 'KaitoHH',
+        const gitalk = new Gitalk({
+            clientID: '1387d060f142af6ad27f',
+            clientSecret: 'fb7a967c1a83189c08c221d8ecb7eccc1c5c083f',
             repo: 'douyu_lottery',
-            oauth: {
-                client_id: '1387d060f142af6ad27f',
-                client_secret: 'fb7a967c1a83189c08c221d8ecb7eccc1c5c083f',
-            }
+            owner: 'KaitoHH',
+            admin: ['KaitoHH'],
+            id: location.href
         });
+        gitalk.render('comments');
     </script>
 </body>
 
