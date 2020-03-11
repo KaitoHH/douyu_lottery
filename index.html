@@ -7,6 +7,7 @@
     <title>斗鱼赔率计算器</title>
     <link href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.1/dist/css/foundation.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/foundation-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/imsun/gitment/style/default.min.css">
     <style>
         td:nth-child(1) {
             width: 40%;
@@ -129,6 +130,7 @@
         <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
             <li class="tabs-title is-active"><a href="#panel1c">关于</a></li>
             <li class="tabs-title"><a href="#panel2c">捐赠</a></li>
+            <li class="tabs-title"><a href="#panel3c">留言</a></li>
         </ul>
         <div class="tabs-content" data-tabs-content="collapsing-tabs">
             <div class="tabs-panel is-active" id="panel1c">
@@ -165,6 +167,9 @@
                     </div>
                 </div>
             </div>
+            <div class="tabs-panel" id="panel3c">
+                <div class="comments"></div>
+            </div>
         </div>
     </div>
 
@@ -176,6 +181,17 @@
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a50d88f34f69114"></script>
     <script>
         $(document).foundation();
+    </script>
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        const gitment = new Gitment({
+            owner: 'KaitoHH',
+            repo: 'douyu_lottery',
+            oauth: {
+                client_id: '1387d060f142af6ad27f',
+                client_secret: 'fb7a967c1a83189c08c221d8ecb7eccc1c5c083f',
+            }
+        });
     </script>
 </body>
 
